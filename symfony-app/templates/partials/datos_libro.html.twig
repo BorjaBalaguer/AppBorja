@@ -1,0 +1,8 @@
+<ul>
+    <li><strong>{{ libro.titulo }}</strong></li>
+    <li><strong>ISBN</strong>: {{ libro.isbn }}</li>
+    {% if libro.autor %}
+    <li><strong>Autor: </strong>{{ libro.autor.nombre}}</li>
+    {% endif %}
+    <li><strong>Editorial</strong>: {{ libro.titulo }}</li>
+</ul>

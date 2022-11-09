@@ -41,7 +41,7 @@ class LibroRepository extends ServiceEntityRepository
 
     public function findByName($text): array{
         $qb = $this->createQueryBuilder('c')
-        ->andWhere('c.nombre LIKE :text')
+        ->andWhere('c.titulo LIKE :text')
         ->setParameter('text', '%' . $text . '%')
         ->getQuery();
         return $qb->execute();

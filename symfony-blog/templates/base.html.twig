@@ -1,19 +1,38 @@
 <!DOCTYPE html>
+<!-- Website template by freewebsitetemplates.com -->
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
-        {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
-        {% block stylesheets %}
-            {{ encore_entry_link_tags('app') }}
-        {% endblock %}
-
-        {% block javascripts %}
-            {{ encore_entry_script_tags('app') }}
-        {% endblock %}
-    </head>
-    <body>
-        {% block body %}{% endblock %}
-    </body>
+<head>
+	<meta charset="UTF-8">
+    <title>{% block title %}Tourism Surfing Web Template{% endblock %}</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<div id="header">
+		<a href="index.html"><img src="images/logo.png" alt="Logo"></a>
+	</div>
+    {% block body %}
+    {% endblock %}
+	<div id="footer">
+		<div>
+			<div id="newsletter">
+				<h3>Newsletter</h3>
+				<p>
+					You can remove any link to our website from this website template, you&#39;re free to use this website template without linking back to us.
+				</p>
+				<form action="index.html">
+					<input type="text" value="email address" onblur="this.value=!this.value?'email address':this.value;" onfocus="this.select()" onclick="this.value='';">
+				</form>
+			</div>
+			<div id="connect">
+				<h3>Social</h3>
+				<a href="http://freewebsitetemplates.com/go/facebook/" id="facebook" target="_blank">Facebook</a>
+				<a href="http://freewebsitetemplates.com/go/twitter/" id="twitter" target="_blank">Twitter</a>
+				<a href="http://freewebsitetemplates.com/go/googleplus/" id="googleplus" target="_blank">Google&#43;</a>
+			</div>
+		</div>
+		<p>
+			&copy; Copyright 2023. All rights reserved.
+		</p>
+	</div>
+</body>
 </html>

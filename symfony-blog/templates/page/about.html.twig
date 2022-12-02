@@ -1,16 +1,8 @@
-<!DOCTYPE html>
-<!-- Website template by freewebsitetemplates.com -->
-<html>
-<head>
-	<meta charset="UTF-8">
-	<title>About - Tourism Surfing Web Template</title>
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-</head>
-<body>
-	<div id="header">
-		<a href="index.html"><img src="images/logo.png" alt="Logo"></a>
-	</div>
-	<div id="body">
+{% extends 'base.html.twig' %}
+{% block title%}About - Tourism Surfing Web Template{% endblock %}
+{% block body%}
+<!-- Principal Content Start-->
+<div id="body">
 		<div>
 			<ul id="navigation">
 				<li>
@@ -70,27 +62,5 @@
 			</div>
 		</div>
 	</div>
-	<div id="footer">
-		<div>
-			<div id="newsletter">
-				<h3>Newsletter</h3>
-				<p>
-					You can remove any link to our website from this website template, you&#39;re free to use this website template without linking back to us.
-				</p>
-				<form action="index.html">
-					<input type="text" value="email address" onblur="this.value=!this.value?'email address':this.value;" onfocus="this.select()" onclick="this.value='';">
-				</form>
-			</div>
-			<div id="connect">
-				<h3>Social</h3>
-				<a href="http://freewebsitetemplates.com/go/facebook/" id="facebook" target="_blank">Facebook</a>
-				<a href="http://freewebsitetemplates.com/go/twitter/" id="twitter" target="_blank">Twitter</a>
-				<a href="http://freewebsitetemplates.com/go/googleplus/" id="googleplus" target="_blank">Google&#43;</a>
-			</div>
-		</div>
-		<p>
-			&copy; Copyright 2023. All rights reserved.
-		</p>
-	</div>
-</body>
-</html>
+<!-- End of principal content -->
+{% endblock %}

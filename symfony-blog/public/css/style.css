@@ -418,7 +418,7 @@ p a.more {
 }
 #body div #contact div div {
 	float: left;
-	padding: 49px 0 0;
+	padding: 5px 0 0;
 	width: 300px;
 }
 #body div #contact div div ul {
@@ -578,4 +578,7 @@ p a.more {
 	line-height: 20px;
 	padding: 47px 0 29px;
 	text-align: center;
+}
+#boday div #contact div div.form-group{
+	padding: 0 0 0;
 }

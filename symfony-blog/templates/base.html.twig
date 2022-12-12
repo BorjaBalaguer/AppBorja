@@ -3,15 +3,22 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-    <title>{% block title %}Tourism Surfing Web Template{% endblock %}</title>
+	<title>Contact - Tourism Surfing Web Template</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
 	<div id="header">
 		<a href="index.html"><img src="images/logo.png" alt="Logo"></a>
 	</div>
-    {% block body %}
-    {% endblock %}
+	<div id="body">
+		<div>
+			{{ include ('partials/_navigation.html.twig')}}
+
+			{% block body %}
+			
+			{% endblock %}
+		</div>
+	</div>
 	<div id="footer">
 		<div>
 			<div id="newsletter">

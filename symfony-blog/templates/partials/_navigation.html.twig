@@ -14,4 +14,10 @@
 				<li>
 					<a href="{{path('contact')}}" class="link1">Contact</a>
 				</li>
+				{% if app.user %}
+				<li><a href="{{ path('app_logout') }}" class="link2"> {{ app.user.name }} - Logout</a></li>
+				{% else %}
+				<li class="{{ (app.request.attributes.get('_route') == 'app_login')  ? 'active': ''}} lien"><a href="{{ path('app_login') }}" class="link2">Login</a></li>
+				<li class="{{ (app.request.attributes.get('_route') == 'app_register')  ? 'active': ''}} "><a href="{{ path('app_register') }}" class="link1">Register</a></li>
+				{% endif %}
 </ul>

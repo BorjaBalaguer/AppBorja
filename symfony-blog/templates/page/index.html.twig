@@ -20,6 +20,39 @@
 					</div>
 				</div>
 			</div>
+			<div class="table-responsive">
+			<table class="table text-center">
+				<thead>
+				<tr>
+				{% for category in categories %}
+					<td><a class="link {{loop.first ? 'active' : ''}}" href="#category{{category.id}}" data-toggle="tab">{{category.name}}</a></td>
+				{% endfor %}
+				</tr>
+				</thead>
+			</table>
+			<hr>
+			</div>
+			<nav class="text-center">
+				<ul class="pagination">
+					<li class="active"><a href="#">1</a></li>
+					<li><a href="#">2</a></li>
+					<li><a href="#">3</a></li>
+					<li><a href="#" aria-label="suivant">
+					<span aria-hidden="true">&raquo;</span>
+					</a></li>
+				</ul>
+			</nav>
+			<div class="tab-content">
+			{% for category in categories %}
+				<div id="category{{category.id}}" class="tab-pane {{loop.first ? 'active' : ''}}" >
+				<div class="row popup-gallery">
+				{% for image in category.images %}
+				{{ include ('partials/_image.html.twig')}}
+				{% endfor %}
+					</div>
+				</div>
+			{% endfor %}
+
 		</div>
 
 {% endblock %}

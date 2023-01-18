@@ -6,7 +6,7 @@ use App\Entity\Team;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
 use EasyCorp\Bundle\EasyAdminBundle\Field\Field;
 use EasyCorp\Bundle\EasyAdminBundle\Field\ImageField;
-use Symfony\Component\Validator\Constraints\Image;
+
 
 class TeamCrudController extends AbstractCrudController
 {
@@ -21,8 +21,7 @@ class TeamCrudController extends AbstractCrudController
             Field::new('name'),
             ImageField::new('photo')
             ->setUploadDir('/public/img')
-            ->setBasePath('/img/')
-            ,
+            ->setBasePath('/img/'),
             Field::new('designation')
         ];
     }
